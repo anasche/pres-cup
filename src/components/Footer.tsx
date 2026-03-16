@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Twitter, Facebook, Youtube, Linkedin, Mail } from 'lucide-react';
+import Logo from '@/assets/logo/logo.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
     <footer className="bg-blue-950 text-white pt-24 pb-8 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-3xl mb-6 shadow-xl shadow-blue-500/20">🏇</div>
+          <img src={Logo} alt="UAE President Cup" className="h-20 w-auto object-contain mb-6 filter brightness-0 invert" />
           <h2 className="text-3xl font-bold tracking-tighter mb-4">PRESIDENT CUP SERIES</h2>
           <p className="text-blue-200/60 max-w-lg italic font-serif">
             "Promoting the heritage and nobility of the Purebred Arabian Horse across the globe."

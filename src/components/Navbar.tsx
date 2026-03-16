@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Search, Globe, User } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from '@/assets/logo/logo.png';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,11 +30,11 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 flex items-center justify-center text-3xl filter grayscale group-hover:grayscale-0 transition-all">⚜️</div>
-            <div className={`flex flex-col leading-tight ${isScrolled ? 'text-gray-900' : 'text-white md:text-gray-900'} transition-colors`}>
+            <img src={Logo} alt="UAE President Cup" className="h-12 w-auto object-contain" />
+            {/* <div className={`flex flex-col leading-tight ${isScrolled ? 'text-gray-900' : 'text-white md:text-gray-900'} transition-colors`}>
                 <span className="text-[10px] font-black tracking-[0.2em] uppercase">UAE PRESIDENT CUP</span>
                 <span className="text-[8px] font-medium tracking-[0.1em] text-gray-400">PUREBRED ARABIAN CLASSIC SERIES</span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Menu */}
