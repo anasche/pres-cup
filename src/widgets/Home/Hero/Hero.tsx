@@ -15,6 +15,8 @@ import sponsor6 from "@/assets/images/sponsors/sponsor-6.png";
 import sponsor7 from "@/assets/images/sponsors/sponsor-7.png";
 import sponsor8 from "@/assets/images/sponsors/sponsor-8.png";
 import sponsor9 from "@/assets/images/sponsors/sponsor-9.png";
+import ExploreLink from "@/components/ExploreLink";
+import { useHero } from "./useHero";
 
 const Hero: React.FC = () => {
   const sponsors = [
@@ -28,11 +30,11 @@ const Hero: React.FC = () => {
     { name: "Sponsor 8", logo: sponsor8 },
     { name: "Sponsor 9", logo: sponsor9 },
   ];
-
+const { main } = useHero();
   return (
-    <section className="relative w-full max-w-[1728px] mx-auto h-[70vh] md:h-[80vh] xl:h-[1012px] flex flex-col justify-end overflow-hidden">
+    <section ref={main} className="relative w-full mx-auto h-screen flex flex-col justify-end overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 cover">
         <img
           src={HeroBanner}
           alt="Horse Racing"
@@ -42,25 +44,26 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Hero Content — responsive dimensions and positioning */}
-      <div className="relative xl:absolute xl:top-[411px] xl:left-1/2 xl:-translate-x-1/2 w-full z-10 px-6 py-20 flex flex-col items-center justify-center gap-6 xl:gap-[19px] text-center text-white">
-        <Title as="h1" className="whitespace-nowrap">
+      <div className="relative xl:absolute bottom-0 xl:left-1/2 xl:-translate-x-1/2 w-full z-10 px-6 pb-[200px] flex flex-col items-center justify-center gap-6 xl:gap-[19px] text-center text-white">
+        <Title as="h1" className="whitespace-nowrap fade">
           Tradition in Every Trot
         </Title>
-        <p className="font-medium text-[17px] leading-none tracking-tightest text-white max-w-sm md:max-w-xl">
+        <p className="font-medium fade text-[17px] leading-none tracking-tightest text-white max-w-sm md:max-w-xl">
           All the latest info about Moroccan leg of the series
         </p>
-        <div className="flex justify-center mt-2 xl:mt-0">
-          <Button className="uppercase shadow-2xl shadow-blue-500/20">
+        <div className="flex justify-center mt-2 xl:mt-0 fade">
+          <ExploreLink to="/live-stream">FREE LIVE STREAM</ExploreLink>
+          {/* <Button className="uppercase shadow-2xl shadow-blue-500/20">
             FREE LIVE STREAM
             <div className="bg-white/20 p-1 rounded-full">
               <Play size={14} fill="white" />
             </div>
-          </Button>
+          </Button> */}
         </div>
       </div>
 
       {/* Sponsors Bar — responsive height and scrolling */}
-      <div className="relative z-10 bg-[linear-gradient(180deg,rgba(21,21,133,0.04)_0%,#161687_100%)] h-24 xl:h-[141px] flex items-center shrink-0">
+      <div className="relative fade z-10 bg-[linear-gradient(180deg,rgba(21,21,133,0.04)_0%,#161687_100%)] h-24 xl:h-[141px] flex items-center shrink-0">
         <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px] overflow-hidden">
           <Marquee speed={25}>
             <div className="flex items-center gap-8 md:gap-12 xl:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all">

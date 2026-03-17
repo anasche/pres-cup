@@ -5,7 +5,7 @@ import Title from "@/components/Title"; // Assuming Title component is imported
 
 const BookExperience: React.FC = () => {
   return (
-    <section className="relative py-60 min-h-[800px] flex items-center overflow-hidden group">
+    <section className="relative py-20  flex items-center overflow-hidden group">
       <div className="absolute inset-0">
         <img
           src={EventBackground}
