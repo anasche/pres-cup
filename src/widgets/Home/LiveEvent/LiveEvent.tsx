@@ -32,7 +32,8 @@ const LiveEvent: React.FC = () => {
             Live Event
           </Title>
           <p className="font-medium text-[15px] leading-relaxed text-black/60 text-center max-w-2xl mx-auto">
-            Watch the UAE President's Cup live and enjoy the latest horse racing action and highlights
+            Watch the UAE President's Cup live and enjoy the latest horse racing
+            action and highlights
           </p>
         </div>
 
@@ -44,14 +45,16 @@ const LiveEvent: React.FC = () => {
               alt="Main Live"
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
             />
-            
+
             {/* Gradient Overlay */}
             <div className="absolute inset-0 group-hover:bg-black/10 transition-colors bg-[linear-gradient(180deg,rgba(4,4,67,0)_50.06%,#000000_92.69%)]"></div>
 
             {/* Top Bar Overlays */}
             <div className="absolute top-8 left-8 right-8 flex justify-between items-start">
               <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold text-white tracking-widest uppercase">Live Now</span>
+                <span className="text-[10px] font-bold text-white tracking-widest uppercase">
+                  Live Now
+                </span>
                 <span className="w-2.5 h-2.5 bg-red-600 rounded-full animate-pulse"></span>
               </div>
               <div className="flex gap-6">
@@ -59,13 +62,17 @@ const LiveEvent: React.FC = () => {
                   <div className="w-10 h-10 flex items-center justify-center text-white">
                     <Clock size={28} strokeWidth={2.5} />
                   </div>
-                  <span className="text-[10px] font-bold text-white uppercase tracking-wider opacity-90">Watch later</span>
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider opacity-90">
+                    Watch later
+                  </span>
                 </button>
                 <button className="flex flex-col items-center gap-1.5 group/btn">
                   <div className="w-10 h-10 flex items-center justify-center text-white">
                     <Share2 size={28} strokeWidth={2.5} />
                   </div>
-                  <span className="text-[10px] font-bold text-white uppercase tracking-wider opacity-90">Share</span>
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider opacity-90">
+                    Share
+                  </span>
                 </button>
               </div>
             </div>
@@ -88,34 +95,32 @@ const LiveEvent: React.FC = () => {
 
           {/* Sidebar Videos */}
           <div className="lg:col-span-4 space-y-6">
-  {sidebarVideos.map((video) => (
-    <div key={video.id} className="group cursor-pointer">
-      <div className="relative w-[333px] h-[166px] overflow-hidden border-2 border-transparent hover:border-blue-600/20 transition-all rounded-[12px]">
-        
-        <img
-          src={video.thumbnail}
-          alt={video.title}
-          className="w-full h-full object-cover"
-        />
+            {sidebarVideos.map((video) => (
+              <div key={video.id} className="group cursor-pointer">
+                <div className="relative w-[333px] h-[166px] overflow-hidden border-2 border-transparent hover:border-blue-600/20 transition-all rounded-[12px]">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-full object-cover"
+                  />
 
-        {/* Gradient + Title */}
-        <div className="absolute inset-0 flex flex-col justify-end p-4 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#000000_86.5%)]">
-          <h4 className="text-[11px] font-bold text-white leading-snug max-w-[240px]">
-            {video.title}
-          </h4>
-        </div>
+                  {/* Gradient + Title */}
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#000000_86.5%)]">
+                    <h4 className="text-[11px] font-bold text-white leading-snug max-w-[240px]">
+                      {video.title}
+                    </h4>
+                  </div>
 
-        {/* Live Badge */}
-        <div className="absolute top-3 right-3">
-          <div className="bg-red-600 text-white text-[8px] font-black px-1.5 py-0.5 rounded shadow-lg">
-            Live
+                  {/* Live Badge */}
+                  <div className="absolute top-3 right-3">
+                    <div className="bg-red-600 text-white text-[8px] font-black px-1.5 py-0.5 rounded shadow-lg">
+                      Live
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        </div>
-
-      </div>
-    </div>
-  ))}
-</div>
         </div>
       </div>
     </section>

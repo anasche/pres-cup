@@ -55,7 +55,7 @@ const News: React.FC = () => {
     <section className="py-32 bg-gray-50">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
         {/* Header */}
-        <div className="text-center mb-16 mb-12 border-b border-gray-200 pb-8">
+        <div className="text-center mb-16">
           <div>
             <Title dark={true} className="mb-2">
               News
