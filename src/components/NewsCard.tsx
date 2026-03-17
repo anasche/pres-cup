@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { ArrowRight } from "lucide-react";
 import Button from "./Button";
 
@@ -10,15 +10,24 @@ interface NewsCardProps {
   description?: string;
 }
 
-const NewsCard: React.FC<NewsCardProps> = ({ image, tag, title, date, description }) => {
-  const slug = title.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
+const NewsCard: React.FC<NewsCardProps> = ({
+  image,
+  tag,
+  title,
+  date,
+  description,
+}) => {
+  const slug = title
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-");
 
   return (
     <div className="group bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
       <div className="relative aspect-[16/11] overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
         {/* {tag && (
@@ -32,16 +41,22 @@ const NewsCard: React.FC<NewsCardProps> = ({ image, tag, title, date, descriptio
           {title}
         </h3>
         <p className="text-gray-400 text-xs leading-relaxed mb-8 line-clamp-3">
-          {description || "The Moroccan leg of the UAE President Cup for Purebred Arabian Horses promises to be an extraordinary event, showcasing the best of Arabian horse heritage..."}
+          {description ||
+            "The Moroccan leg of the UAE President Cup for Purebred Arabian Horses promises to be an extraordinary event, showcasing the best of Arabian horse heritage..."}
         </p>
-        
+
         <div className="mt-auto flex justify-end">
-           <Button to={`/news/${slug}`} variant="primary" size="lg" className="shadow-lg shadow-blue-600/20">
-              Continue Reading
-              <div className="bg-white/20 p-1 rounded-full">
-                <ArrowRight size={14} fill="white" />
-              </div>
-           </Button>
+          <Button
+            to={`/news/${slug}`}
+            variant="primary"
+            size="lg"
+            className="shadow-lg shadow-blue-600/20"
+          >
+            Continue Reading
+            <div className="bg-white/20 p-1 rounded-full">
+              <ArrowRight size={14} fill="white" />
+            </div>
+          </Button>
         </div>
       </div>
     </div>
