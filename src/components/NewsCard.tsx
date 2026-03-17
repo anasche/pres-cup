@@ -35,7 +35,7 @@ const NewsCard: React.FC<NewsCardProps> = ({ image, tag, title, date, descriptio
           {description || "The Moroccan leg of the UAE President Cup for Purebred Arabian Horses promises to be an extraordinary event, showcasing the best of Arabian horse heritage..."}
         </p>
         
-        <div className="mt-auto">
+        <div className="mt-auto flex justify-end">
            <Button to={`/news/${slug}`} variant="primary" size="lg" className="shadow-lg shadow-blue-600/20">
               Continue Reading
               <div className="bg-white/20 p-1 rounded-full">
