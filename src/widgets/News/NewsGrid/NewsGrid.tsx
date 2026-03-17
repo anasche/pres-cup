@@ -1,23 +1,25 @@
 import NewsCard from '@/components/NewsCard';
+import Event1 from "@/assets/images/news/news-1.png";
+
 
 const NewsGrid: React.FC = () => {
   const newsItems = [
     {
-      image: 'https://images.unsplash.com/photo-1598974357801-cbca100e0444?auto=format&fit=crop&q=80&w=800',
+      image: Event1,
       date: 'Monday, 25 April 10:49AM',
       tag: 'Arabian Horse News',
       title: 'Congratulations to the champions of the Moroccan leg of the UAE President Cup Series',
       description: 'The winners were honored by His Excellency Omar Abdulrahman Al Attiyah, the UAE Consul in Rabat, His Excellency Faisal Al Rahmani, the Secretary-General of the UAE President\'s Cup Series Committee for Purebred Arabian Horses, and Omar Al Saqley, the General Manager of the Royal Company for the Encouragement of Horse-Racing.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1534491336113-f43405391d84?auto=format&fit=crop&q=80&w=800',
+      image: Event1,
       date: 'Monday, 25 April 10:49AM',
       tag: 'Competition News',
       title: 'Tomorrow, the Moroccan leg of the #UAEPresidentCup for Purebred Arabian Horses kicks off',
       description: 'The winners were honored by His Excellency Omar Abdulrahman Al Attiyah, the UAE Consul in Rabat, His Excellency Faisal Al Rahmani, the Secretary-General of the UAE President\'s Cup Series Committee for Purebred Arabian Horses.'
     },
     {
-      image: 'https://images.unsplash.com/photo-1599407981387-578cf36c0757?auto=format&fit=crop&q=80&w=800',
+      image: Event1,
       date: 'Monday, 25 April 10:49AM',
       tag: 'Arabian Horse News',
       title: 'Tomorrow, the Netherlands hosts the UAE President\'s Cup for Arabian Horses.',
@@ -29,7 +31,7 @@ const NewsGrid: React.FC = () => {
   const gridItems = [...newsItems, ...newsItems, ...newsItems];
 
   return (
-    <section className="bg-white py-20 px-4">
+    <section className="bg-white px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {gridItems.map((item, index) => (

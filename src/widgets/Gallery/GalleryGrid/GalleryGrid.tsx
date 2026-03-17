@@ -1,4 +1,7 @@
 import React from 'react';
+import Gallery1 from "@/assets/images/gallery/image1.png";
+import Gallery2 from "@/assets/images/gallery/image2.jpg";
+import Gallery3 from "@/assets/images/gallery/image3.jpg";
 
 interface GalleryGridProps {
   onAlbumClick: (albumId: number) => void;
@@ -9,11 +12,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ onAlbumClick }) => {
     id: 1,
     title: "Moroccan leg of the UAE President Cup Series",
     imageCount: 30,
-    images: [
-      "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1598974357801-cbca100e0444?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&q=80&w=800",
-    ]
+    images: [Gallery1, Gallery2, Gallery3]
   });
 
   return (

@@ -1,4 +1,6 @@
 import React from 'react';
+import About1 from "@/assets/images/about/about-1.jpg";
+
 
 const AboutHero: React.FC = () => {
   return (
@@ -21,7 +23,7 @@ const AboutHero: React.FC = () => {
           <div className="lg:w-1/2">
             <div className="rounded-[40px] overflow-hidden shadow-2xl transform rotate-1">
               <img 
-                src="https://images.unsplash.com/photo-1599407954933-728b7593c6df?auto=format&fit=crop&q=80&w=1200" 
+                src={About1} 
                 alt="Horse racing at sunset" 
                 className="w-full h-full object-cover"
               />

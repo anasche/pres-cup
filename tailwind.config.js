@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+        'dm-sans': ['"DM Sans"', 'sans-serif'],
+      },
+      letterSpacing: {
+        'tightest': '-0.03em',
+      }
+    },
   },
   plugins: [],
 }

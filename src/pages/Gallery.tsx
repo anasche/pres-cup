@@ -4,6 +4,9 @@ import Footer from '@/components/Footer';
 import GalleryHeader from '@/widgets/Gallery/GalleryHeader';
 import GalleryGrid from '@/widgets/Gallery/GalleryGrid';
 import GalleryLightbox from '@/widgets/Gallery/GalleryLightbox';
+import Gallery1 from "@/assets/images/gallery/image1.png";
+import Gallery2 from "@/assets/images/gallery/image2.jpg";
+import Gallery3 from "@/assets/images/gallery/image3.jpg";
 
 const Gallery: React.FC = () => {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
@@ -19,12 +22,12 @@ const Gallery: React.FC = () => {
   };
 
   const images = [
-    { id: 1, src: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=2000" },
-    { id: 2, src: "https://images.unsplash.com/photo-1598974357801-cbca100e0444?auto=format&fit=crop&q=80&w=2000" },
-    { id: 3, src: "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&q=80&w=2000" },
-    { id: 4, src: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=2000" },
-    { id: 5, src: "https://images.unsplash.com/photo-1598974357801-cbca100e0444?auto=format&fit=crop&q=80&w=2000" },
-    { id: 6, src: "https://images.unsplash.com/photo-1551884831-bbf3cdc6469e?auto=format&fit=crop&q=80&w=2000" },
+    { id: 1, src: Gallery1 },
+    { id: 2, src: Gallery2 },
+    { id: 3, src: Gallery3 },
+    { id: 4, src: Gallery1 },
+    { id: 5, src: Gallery2 },
+    { id: 6, src: Gallery3 },
   ];
 
   return (

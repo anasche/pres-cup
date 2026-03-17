@@ -45,7 +45,7 @@ const RaceBanner: React.FC = () => {
             </div>
 
             <div className="flex">
-              <Button className="rounded-full bg-blue-600 hover:bg-blue-700 px-8 py-6 text-sm font-bold tracking-[0.2em] flex items-center gap-3">
+              <Button className="uppercase">
                 BOOK EXPERIENCE <ChevronRight size={18} className="bg-white text-blue-600 rounded-full" />
               </Button>
             </div>

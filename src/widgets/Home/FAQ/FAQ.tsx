@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import Title from '@/components/Title';
 
 const FAQ: React.FC = () => {
   const faqs = [
@@ -12,34 +13,49 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-white">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="text-center mb-20">
-           <h2 className="text-6xl font-black text-[#0A0B14] mb-4">FAQ</h2>
-           <p className="text-gray-300 text-xs font-bold uppercase tracking-[0.3em]">Common questions about the series</p>
-        </div>
+    <section className="py-32 bg-[#F8F9FB]">
+      <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center">
+            <Title dark={true} className="mb-5 text-center">
+              Frequently Asked Questions
+            </Title>
+            <p className="mb-12 font-medium text-[17px] leading-none tracking-tightest text-black">
+              Common questions about the series
+            </p>
+          </div>
 
-        <div className="space-y-4">
-           {faqs.map((faq, index) => (
-             <div key={index} className="border-b border-gray-100 last:border-0 pb-4">
-                <button 
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border-b border-gray-100 last:border-0 pb-4"
+              >
+                <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                   className="w-full flex items-center justify-between py-6 text-left group"
                 >
-                  <span className={`text-lg font-bold tracking-tight transition-colors ${openIndex === index ? 'text-blue-600' : 'text-[#0A0B14] group-hover:text-blue-600'}`}>
+                  <span
+                    className={`text-lg font-bold tracking-tight transition-colors ${openIndex === index ? "text-blue-600" : "text-[#0A0B14] group-hover:text-blue-600"}`}
+                  >
                     {faq.question}
                   </span>
-                  <div className={`text-blue-600 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                  <div
+                    className={`text-blue-600 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`}
+                  >
                     {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                   </div>
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-48 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-                   <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
-                     {faq.answer}
-                   </p>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-48 opacity-100 pb-6" : "max-h-0 opacity-0"}`}
+                >
+                  <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
+                    {faq.answer}
+                  </p>
                 </div>
-             </div>
-           ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

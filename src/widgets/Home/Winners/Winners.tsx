@@ -1,5 +1,8 @@
 import React from 'react';
 import { User, Trophy, Star, Shield, Award } from 'lucide-react';
+import Title from '@/components/Title';
+import Winners1 from "@/assets/images/winners/winners.png";
+
 
 const Winners: React.FC = () => {
   const winners = [
@@ -25,9 +28,11 @@ const Winners: React.FC = () => {
 
   return (
     <section className="py-32 bg-white relative">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-black text-[#0A0B14] mb-4">Winners of the Race</h2>
+          <Title dark={true} className="mb-12">
+            UAE Winners
+          </Title>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -36,7 +41,7 @@ const Winners: React.FC = () => {
               {/* Jockey Silk Icon placeholder/SVG from design */}
               <div className="flex justify-between items-start mb-8">
                 <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
-                  <img src="https://img.icons8.com/color/96/jockey-silk.png" alt="Silk" className="w-12 h-12" />
+                  <img src={Winners1} alt="Silk" className="w-12 h-12" />
                 </div>
                 <div className="bg-blue-600/20 text-blue-400 p-3 rounded-2xl">
                    <Trophy size={24} />

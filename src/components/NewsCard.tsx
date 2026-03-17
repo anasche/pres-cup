@@ -1,6 +1,6 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight } from "lucide-react";
+import Button from "./Button";
 
 interface NewsCardProps {
   image: string;
@@ -21,11 +21,11 @@ const NewsCard: React.FC<NewsCardProps> = ({ image, tag, title, date, descriptio
           alt={title} 
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        {tag && (
+        {/* {tag && (
           <div className="absolute top-6 left-6 bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider px-4 py-2 rounded shadow-lg">
              {tag}
           </div>
-        )}
+        )} */}
       </div>
       <div className="p-10 flex flex-col flex-grow">
         <h3 className="text-xl font-black text-[#0A0B14] mb-4 group-hover:text-blue-600 transition-colors leading-tight tracking-tight uppercase">
@@ -36,12 +36,12 @@ const NewsCard: React.FC<NewsCardProps> = ({ image, tag, title, date, descriptio
         </p>
         
         <div className="mt-auto">
-           <Link to={`/news/${slug}`} className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest transition-all shadow-lg shadow-blue-600/20">
+           <Button to={`/news/${slug}`} variant="primary" size="lg" className="shadow-lg shadow-blue-600/20">
               Continue Reading
               <div className="bg-white/20 p-1 rounded-full">
                 <ArrowRight size={14} fill="white" />
               </div>
-           </Link>
+           </Button>
         </div>
       </div>
     </div>

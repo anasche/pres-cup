@@ -1,4 +1,6 @@
 import React from 'react';
+import About2 from "@/assets/images/about/about-2.png";
+import About3 from "@/assets/images/about/about-3.png";
 
 const AboutIntro: React.FC = () => {
   return (
@@ -9,14 +11,14 @@ const AboutIntro: React.FC = () => {
           <div className="lg:w-1/2 flex gap-4">
             <div className="w-1/2 rounded-[40px] overflow-hidden shadow-xl aspect-[3/4]">
               <img 
-                src="https://images.unsplash.com/photo-1551801329-87c2bc3a479a?auto=format&fit=crop&q=80&w=800" 
+                src={About2} 
                 alt="Sheikh Portrait placeholder" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
             <div className="w-1/2 rounded-[40px] overflow-hidden shadow-xl aspect-[3/4] mt-12">
               <img 
-                src="https://images.unsplash.com/photo-1598974357801-cbca100e0444?auto=format&fit=crop&q=80&w=800" 
+                src={About3}
                 alt="Sheikh with White Horse" 
                 className="w-full h-full object-cover"
               />
