@@ -4,14 +4,14 @@ import Title from "@/components/Title";
 
 const AboutHero: React.FC = () => {
   return (
-    <section className="bg-[#f8f9fa] pt-32 pb-20 px-4">
+    <section className="bg-white pt-32 pb-16 px-4">
       <div className="container mx-auto max-w-7xl">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          <div className="lg:w-1/2 space-y-6">
-            <Title dark={true}>
+        <div className="flex flex-col lg:flex-row items-start gap-12">
+          <div className="lg:w-1/2 space-y-5 pt-4">
+            <Title dark={true} className="text-[48px] md:text-[56px] xl:text-[64px] leading-tight">
               UAE <br /> President Cup
             </Title>
-            <div className="space-y-4 text-gray-700 leading-relaxed max-w-xl">
+            <div className="space-y-4 text-gray-600 leading-relaxed text-[14px] max-w-md">
               <p>
                 The series of races for the UAE President's Cup for Purebred
                 Arabian Horses began in 1994, envisioned by the late founder,
@@ -25,7 +25,7 @@ const AboutHero: React.FC = () => {
             </div>
           </div>
           <div className="lg:w-1/2">
-            <div className="rounded-[40px] overflow-hidden shadow-2xl transform rotate-1">
+            <div className="rounded-[24px] overflow-hidden shadow-xl">
               <img
                 src={About1}
                 alt="Horse racing at sunset"

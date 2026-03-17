@@ -3,33 +3,32 @@ import React from "react";
 
 const BoardMembers: React.FC = () => {
   const members = Array(8).fill({
-    name: "Board Member Name",
+    name: "Board Memeber Name",
     position: "Position",
   });
 
   return (
-    <section className="bg-white py-24 px-4 border-t border-gray-100">
+    <section className="bg-white py-16 px-4 border-t border-gray-100">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-20 space-y-2">
-          <Title dark={true}>Board Members</Title>
-          <p className="font-medium text-[17px] leading-none tracking-tightest text-gray-700 max-w-sm md:max-w-xl">
-            Meet the Board{" "}
+        <div className="text-center mb-14 space-y-2">
+          <Title dark={true}>Board Memebers</Title>
+          <p className="font-medium text-[15px] leading-none tracking-tightest text-gray-500">
+            Meet the board
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center group text-center"
+              className="flex flex-col items-center text-center"
             >
-              <div className="w-full aspect-square rounded-[40px] bg-gray-200 mb-6 transition-transform duration-500 group-hover:scale-105 shadow-sm border border-gray-100 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="w-full aspect-square rounded-[20px] bg-gray-200 mb-4 overflow-hidden">
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-1 font-serif uppercase tracking-tight">
+              <h3 className="text-[15px] font-bold text-gray-900 mb-1 leading-snug">
                 {member.name}
               </h3>
-              <p className="text-gray-500 text-sm font-medium tracking-widest uppercase">
+              <p className="text-gray-400 text-[13px] font-medium">
                 {member.position}
               </p>
             </div>

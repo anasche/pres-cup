@@ -23,38 +23,37 @@ const NewsCard: React.FC<NewsCardProps> = ({
     .replace(/\s+/g, "-");
 
   return (
-    <div className="group bg-white rounded-[40px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
-      <div className="relative aspect-[16/11] overflow-hidden">
+    <div className="group bg-white rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+      <div className="relative aspect-[16/10] overflow-hidden">
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        {/* {tag && (
-          <div className="absolute top-6 left-6 bg-blue-600 text-white text-[9px] font-black uppercase tracking-wider px-4 py-2 rounded shadow-lg">
-             {tag}
-          </div>
-        )} */}
       </div>
-      <div className="p-10 flex flex-col flex-grow">
-        <h3 className="text-xl font-black text-[#0A0B14] mb-4 group-hover:text-blue-600 transition-colors leading-tight tracking-tight uppercase">
+      <div className="p-6 flex flex-col flex-grow">
+        {date && (
+          <p className="text-[11px] font-medium text-[#1B3A6B] mb-3 tracking-wide">
+            {date}
+          </p>
+        )}
+        <h3 className="text-[16px] font-bold text-[#0A0B14] mb-3 group-hover:text-blue-600 transition-colors leading-snug">
           {title}
         </h3>
-        <p className="text-gray-400 text-xs leading-relaxed mb-8 line-clamp-3">
+        <p className="text-gray-400 text-[13px] leading-relaxed mb-6 line-clamp-4 flex-grow">
           {description ||
-            "The Moroccan leg of the UAE President Cup for Purebred Arabian Horses promises to be an extraordinary event, showcasing the best of Arabian horse heritage..."}
+            "The winners were honored by His Excellency Omar Abdulrahman Al Attiyah, the UAE Consul in Rabat, His Excellency Faisal Al Rahmani, the Secretary-General of the UAE President's Cup Series Committee for Purebred Arabian Horses and Omar Al Saqley, the General Manager of the Royal Company for the Encouragement of Horse-Racing."}
         </p>
 
-        <div className="mt-auto flex justify-end">
+        <div className="mt-auto">
           <Button
             to={`/news/${slug}`}
             variant="primary"
-            size="lg"
-            className="shadow-lg shadow-blue-600/20"
+            size="md"
           >
-            Continue Reading
+            Read more
             <div className="bg-white/20 p-1 rounded-full">
-              <ArrowRight size={14} fill="white" />
+              <ArrowRight size={12} fill="white" />
             </div>
           </Button>
         </div>

@@ -52,26 +52,18 @@ const News: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-6">
           <div>
             <Title dark={true} className="mb-2">
               News
             </Title>
-            <p className="font-medium text-[17px] leading-none tracking-tightest text-black">
+            <p className="font-medium text-[15px] leading-none tracking-tightest text-black/60">
               Stay updated with the latest from the world of horse racing
             </p>
           </div>
-
-          {/* <button className="flex items-center gap-2 text-blue-600 font-bold mt-4 md:mt-0 group uppercase tracking-widest text-sm">
-            View All News
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </button> */}
         </div>
 
         <div className="flex gap-2 mb-6 justify-end text-black">

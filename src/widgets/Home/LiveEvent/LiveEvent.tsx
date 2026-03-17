@@ -25,10 +25,10 @@ const LiveEvent: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
-        <div className="text-center mb-16">
-          <Title dark={true} className="mb-4">
+        <div className="text-center mb-10">
+          <Title dark={true} className="mb-3">
             Live Event
           </Title>
           <p className="font-medium text-[15px] leading-relaxed text-black/60 text-center max-w-2xl mx-auto">
@@ -37,9 +37,9 @@ const LiveEvent: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Main Video Player */}
-          <div className="lg:col-span-8 relative overflow-hidden group cursor-pointer shadow-2xl aspect-[1144/622] rounded-t-[16px] rounded-b-[11px]">
+          <div className="lg:col-span-8 relative overflow-hidden group cursor-pointer shadow-2xl aspect-[16/9] rounded-[16px]">
             <img
               src={Event1}
               alt="Main Live"
@@ -94,10 +94,10 @@ const LiveEvent: React.FC = () => {
           </div>
 
           {/* Sidebar Videos */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-4 flex flex-col gap-4">
             {sidebarVideos.map((video) => (
               <div key={video.id} className="group cursor-pointer">
-                <div className="relative w-[333px] h-[166px] overflow-hidden border-2 border-transparent hover:border-blue-600/20 transition-all rounded-[12px]">
+                <div className="relative w-full h-[140px] overflow-hidden border-2 border-transparent hover:border-blue-600/20 transition-all rounded-[12px]">
                   <img
                     src={video.thumbnail}
                     alt={video.title}

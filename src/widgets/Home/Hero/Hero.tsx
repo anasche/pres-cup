@@ -59,20 +59,20 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Sponsors Bar — responsive height and scrolling */}
-      <div className="relative z-10 bg-[linear-gradient(180deg,rgba(21,21,133,0.04)_0%,#161687_100%)] h-24 xl:h-[141px] flex items-center shrink-0">
-        <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px] overflow-hidden">
-          <Marquee speed={25}>
-            <div className="flex items-center gap-8 md:gap-12 xl:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all">
+      {/* Sponsors Bar */}
+      <div className="relative z-10 bg-[#161687] h-[80px] xl:h-[100px] flex items-center shrink-0">
+        <div className="w-full overflow-hidden">
+          <Marquee speed={30}>
+            <div className="flex items-center gap-10 xl:gap-16 px-8">
               {sponsors.map((sponsor, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 h-8 md:h-10 xl:h-12 flex items-center justify-center"
+                  className="flex-shrink-0 h-7 xl:h-9 flex items-center justify-center"
                 >
                   <img
                     src={sponsor.logo}
                     alt={sponsor.name}
-                    className="h-full w-auto object-contain brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
+                    className="h-full w-auto object-contain brightness-0 invert opacity-70"
                   />
                 </div>
               ))}

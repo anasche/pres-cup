@@ -14,15 +14,15 @@ const Winners: React.FC = () => {
   ];
 
   return (
-    <section className="py-32 bg-white relative">
+    <section className="py-20 bg-white relative">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
-        <div className="text-center mb-20">
-          <Title dark={true} className="mb-12">
-            UAE Winners
+        <div className="text-center mb-12">
+          <Title dark={true}>
+            Winners of the Race
           </Title>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {winners.map((winner, index) => (
             <WinnerCard key={index} winner={winner} />
           ))}

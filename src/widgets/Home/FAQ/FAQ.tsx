@@ -5,22 +5,22 @@ import Title from '@/components/Title';
 const FAQ: React.FC = () => {
   const faqs = [
     { question: 'What is the UAE President Cup Series?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
-    { question: 'What is the UAE President Cup Series?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
-    { question: 'What is the UAE President Cup Series?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
-    { question: 'What is the UAE President Cup Series?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
+    { question: 'How can I watch the races online or on television?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
+    { question: 'Where are the UAE President Cup races held?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
+    { question: 'How can I participate in the series?', answer: 'The UAE President Cup is a series of international races for purebred Arabian horses, established to promote the heritage and beauty of the breed globally.' },
   ];
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-[#F8F9FB]">
+    <section className="py-20 bg-white">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <div className="text-center">
-            <Title dark={true} className="mb-5 text-center">
-              Frequently Asked Questions
+            <Title dark={true} className="mb-3 text-center">
+              FAQ
             </Title>
-            <p className="mb-12 font-medium text-[17px] leading-none tracking-tightest text-black">
+            <p className="mb-10 font-medium text-[15px] leading-none tracking-tightest text-black/60">
               Common questions about the series
             </p>
           </div>
