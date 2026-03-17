@@ -13,7 +13,7 @@ const Title: React.FC<TitleProps> = ({
   className = '',
   dark = false
 }) => {
-  const baseClasses = "font-syne font-bold leading-none tracking-tightest align-middle text-4xl md:text-5xl lg:text-6xl xl:text-[60px]";
+  const baseClasses = "font-syne font-bold leading-none tracking-tightest align-middle text-3xl md:text-5xl lg:text-6xl xl:text-[60px] break-words";
   const variantClasses = dark ? "text-[#1a1a1a]" : "text-white";
   
   return (

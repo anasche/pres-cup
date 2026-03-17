@@ -1,7 +1,6 @@
-import Button from "@/components/Button";
-import { ArrowRight } from "lucide-react";
+import ExploreLink from "@/components/ExploreLink";
 import EventBackground from "@/assets/images/experience/experience-1.jpg";
-import Title from "@/components/Title"; // Assuming Title component is imported
+import Title from "@/components/Title";
 
 const BookExperience: React.FC = () => {
   return (
@@ -17,7 +16,7 @@ const BookExperience: React.FC = () => {
 
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px] relative z-10">
         <div className="max-w-xl">
-          <div className="bg-blue-600 text-white text-[9px] font-black px-4 py-1.5  mb-6 inline-block tracking-widest uppercase">
+          <div className="bg-[#161687] text-white text-[9px] font-black px-4 py-1.5 mb-6 inline-block tracking-widest uppercase">
 UAE President Cup          </div>
           <Title dark={false} className="mb-6">
             Book Your Experience
@@ -26,12 +25,7 @@ UAE President Cup          </div>
             Reserve your spot for the most prestigious horse racing events in
             the region. Experience luxury seating and exceptional hospitality.
           </p>
-          <Button className="shadow-2xl shadow-blue-600/30">
-            BOOK EXPERIENCE
-            <div className="bg-white p-1 rounded-full">
-              <ArrowRight size={14} fill="" />
-            </div>
-          </Button>
+          <ExploreLink to="#">BOOK EXPERIENCE</ExploreLink>
         </div>
       </div>
     </section>

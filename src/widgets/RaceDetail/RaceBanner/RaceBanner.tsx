@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '@/components/Button';
-import { MapPin, Calendar, ChevronRight } from 'lucide-react';
+import ExploreLink from '@/components/ExploreLink';
+import { MapPin, Calendar } from 'lucide-react';
 
 const RaceBanner: React.FC = () => {
   return (
@@ -45,9 +45,7 @@ const RaceBanner: React.FC = () => {
             </div>
 
             <div className="flex">
-              <Button className="uppercase">
-                BOOK EXPERIENCE <ChevronRight size={18} className="bg-white text-blue-600 rounded-full" />
-              </Button>
+              <ExploreLink to="#">BOOK EXPERIENCE</ExploreLink>
             </div>
           </div>
         </div>

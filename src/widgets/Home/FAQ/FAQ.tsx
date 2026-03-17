@@ -13,12 +13,12 @@ const FAQ: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-32 bg-[#F8F9FB]">
+    <section className="py-20 bg-white">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center">
             <Title dark={true} className="mb-5 text-center">
-              Frequently Asked Questions
+              FAQ
             </Title>
             <p className="mb-12 font-medium text-[17px] leading-none tracking-tightest text-black">
               Common questions about the series
