@@ -16,12 +16,12 @@ interface WinnerCardProps {
 
 const WinnerCard: React.FC<WinnerCardProps> = ({ winner }) => {
   return (
-    <div className="bg-[#141473] rounded-[30px] p-8 text-white shadow-xl relative overflow-hidden flex flex-col items-center">
-      <h3 className="text-[24px] font-medium leading-[1.2] text-center mb-8 px-4 max-w-[350px]">
+    <div className="bg-[#141473] rounded-[30px] p-6 text-white shadow-xl relative overflow-hidden flex flex-col">
+      <h3 className="font-syne font-normal text-[35px] leading-[35px] tracking-[-0.03em] text-center mb-6 px-2 break-words">
         Moroccan leg of the UAEPresidentCup Series
       </h3>
 
-      <div className="flex items-center gap-10 mb-10">
+      <div className="flex items-center justify-center gap-8 mb-8">
         <div className="flex items-center gap-2 text-white/80">
           <Clock size={16} className="text-white/60" />
           <span className="text-xs font-medium">{winner.time || "02:21:43"}</span>
@@ -32,39 +32,41 @@ const WinnerCard: React.FC<WinnerCardProps> = ({ winner }) => {
         </div>
       </div>
 
-      <div className="flex items-center w-full justify-between mt-auto">
-        <div className="flex-shrink-0">
-          <img src={Winners1} alt="Silk" className="w-16 h-16 object-contain" />
-        </div>
-
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center">
-              <User size={16} className="text-white/60" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[10px] text-white/40 font-medium">Jockey</span>
-              <span className="text-base font-bold leading-tight capitalize">{winner.jockey.split(' ')[0].toLowerCase()}</span>
-            </div>
+      <div className="flex-1 flex flex-col justify-end">
+        <div className="flex items-end justify-between gap-4">
+          <div className="flex-shrink-0">
+            <img src={Winners1} alt="Silk" className="w-16 h-16 object-contain" />
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center">
-              <Shield size={16} className="text-white/60" />
+          <div className="flex-1 grid grid-cols-1 sm:grid-cols-3 gap-4 min-w-0">
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-8 h-8 rounded-full bg-black/30 flex items-center justify-center flex-shrink-0">
+                <User size={14} className="text-white/60" />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-white/40 font-medium">Jockey</span>
+                <span className="text-sm font-bold leading-tight capitalize truncate">{winner.jockey.split(' ')[0].toLowerCase()}</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-[10px] text-white/40 font-medium">Trainer</span>
-              <span className="text-base font-bold leading-tight capitalize">{winner.trainer.split(' ')[0].toLowerCase()}</span>
-            </div>
-          </div>
 
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-black/30 flex items-center justify-center">
-              <Globe size={16} className="text-white/60" />
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-8 h-8 rounded-full bg-black/30 flex items-center justify-center flex-shrink-0">
+                <Shield size={14} className="text-white/60" />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-white/40 font-medium">Trainer</span>
+                <span className="text-sm font-bold leading-tight capitalize truncate">{winner.trainer.split(' ')[0].toLowerCase()}</span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-[10px] text-white/40 font-medium">Owner</span>
-              <span className="text-base font-bold leading-tight capitalize">{winner.owner.split(' ')[0].toLowerCase()}</span>
+
+            <div className="flex items-center gap-2 min-w-0">
+              <div className="w-8 h-8 rounded-full bg-black/30 flex items-center justify-center flex-shrink-0">
+                <Globe size={14} className="text-white/60" />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="text-[9px] text-white/40 font-medium">Owner</span>
+                <span className="text-sm font-bold leading-tight capitalize truncate">{winner.owner.split(' ')[0].toLowerCase()}</span>
+              </div>
             </div>
           </div>
         </div>

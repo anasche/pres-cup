@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Title from "@/components/Title";
 import Event1 from "@/assets/images/events/event-1.png";
-import Event2 from "@/assets/images/events/event-2.png";
-import Event3 from "@/assets/images/events/event-3.png";
+import Event2 from "@/assets/images/events/event-2.jpg";
+import Event3 from "@/assets/images/events/event-3.jpg";
 import Event4 from "@/assets/images/events/event-4.png";
 
 interface Video {
@@ -34,7 +34,7 @@ const videos: Video[] = [
   {
     id: 4,
     title: "Training Session: Behind the Scenes",
-    youtubeId: "ysz5S6PUM-U",
+    youtubeId: "tgbNymZ7vqY",
     thumbnail: Event4,
   },
 ];
@@ -55,20 +55,19 @@ const LiveEvent: React.FC = () => {
   return (
     <section className="py-16 bg-white">
       <div className="w-full max-w-[1728px] mx-auto px-6 xl:px-[77px]">
-
         {/* Header */}
         <div className="text-center mb-10">
           <Title dark={true} className="mb-3">
             Live Event
           </Title>
           <p className="font-medium text-[15px] leading-relaxed text-black/60 max-w-2xl mx-auto">
-            Watch the UAE President's Cup live and enjoy the latest horse racing action and highlights.
+            Watch the UAE President's Cup live and enjoy the latest horse racing
+            action and highlights.
           </p>
         </div>
 
         {/* Layout: main 8 cols + sidebar 4 cols */}
         <div className="flex flex-col lg:flex-row gap-5 items-start">
-
           {/* ── Main player ── */}
           <div className="w-full lg:flex-1">
             <div
@@ -105,18 +104,40 @@ const LiveEvent: React.FC = () => {
                 <div className="absolute top-4 right-5 z-30 flex items-center gap-5">
                   <button className="flex flex-col items-center gap-1 text-white">
                     {/* Clock icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
                     </svg>
-                    <span className="text-[9px] font-semibold uppercase tracking-wider">Watch later</span>
+                    <span className="text-[9px] font-semibold uppercase tracking-wider">
+                      Watch later
+                    </span>
                   </button>
                   <button className="flex flex-col items-center gap-1 text-white">
                     {/* Share icon */}
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-                      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-6 h-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <circle cx="18" cy="5" r="3" />
+                      <circle cx="6" cy="12" r="3" />
+                      <circle cx="18" cy="19" r="3" />
+                      <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                      <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
                     </svg>
-                    <span className="text-[9px] font-semibold uppercase tracking-wider">Share</span>
+                    <span className="text-[9px] font-semibold uppercase tracking-wider">
+                      Share
+                    </span>
                   </button>
                 </div>
               )}
@@ -128,7 +149,10 @@ const LiveEvent: React.FC = () => {
                   onClick={() => setPlaying(true)}
                 >
                   <div className="w-[68px] h-[48px] bg-[#FF0000] rounded-[10px] flex items-center justify-center hover:bg-[#cc0000] transition-colors shadow-2xl">
-                    <svg viewBox="0 0 24 24" className="w-7 h-7 fill-white ml-1">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="w-7 h-7 fill-white ml-1"
+                    >
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
@@ -193,7 +217,6 @@ const LiveEvent: React.FC = () => {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>
